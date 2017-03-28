@@ -21,24 +21,32 @@ var Todo = mongoose.model('Todo', {
   }
 });
 
-// var newTodo = new Todo({
-//   text: 'Wash Plate',
-//   completed: 'true',
-//   completedAt: 1490659200
+// var otherTodo = new Todo({
+//   text:'   Edit my project proposal   '
 // });
 //
-// newTodo.save().then((doc) => {
-//     console.log('Saved todo', doc);
+// otherTodo.save().then((doc) => {
+//     console.log(JSON.stringify(doc,undefined,2));
 // }, (e) => {
-//   console.log('unable to save todo');
+//   console.log('unable to save todo', e);
 // });
 
-var otherTodo = new Todo({
-  text:'   Edit my project proposal   '
+
+var User = mongoose.model('User', {
+  email: {
+    type : String,
+    required: true,
+    trim: true,
+    minlength: 1
+  }
 });
 
-otherTodo.save().then((doc) => {
-    console.log(JSON.stringify(doc,undefined,2));
+var user = new User({
+    email: 'ibukunbamise@yahoo.com'
+});
+
+user.save().then((doc) => {
+    console.log('User Saved', doc);
 }, (e) => {
-  console.log('unable to save todo', e);
+    console.log('unable to save user', e);
 });
