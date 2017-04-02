@@ -1,17 +1,18 @@
 {
-  "name": "node-todo-api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node server/server.js",
-  },
-  "author": "Emmanuel Akinde",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "mongodb": "^2.2.25",
-    "mongoose": "^4.9.2"
-  }
+    "name": "node-todo-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server/server.js"
+    },
+    "author": "Emmanuel Akinde",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.17.1",
+        "express": "^4.15.2",
+        "lodash": "^4.17.4",
+        "mongodb": "^2.2.25",
+        "mongoose": "^4.9.2"
+    }
 }

@@ -1,11 +1,19 @@
 /*jshint esversion: 6 */
 
-const{ObjectID} = require("mongodb");
-const {mongoose} = require("./../server/db/mongoose");
-const {Todo} = require("./../server/models/todo");
-const {User} = require("./../server/models/user");
+const {
+    ObjectID
+} = require("mongodb");
+const {
+    mongoose
+} = require("./../server/db/mongoose");
+const {
+    Todo
+} = require("./../server/models/todo");
+const {
+    User
+} = require("./../server/models/user");
 
-var id ="58d9aadec5c3cf1953c46ade";
+var id = "58d9aadec5c3cf1953c46ade";
 // var id ="58decdbad0ab78223e21020011";
 //
 // if(!ObjectID.isValid(id)){
@@ -33,9 +41,9 @@ var id ="58d9aadec5c3cf1953c46ade";
 
 
 User.findById(id).then((user) => {
-  if(!user){
-    return console.log('User not found');
-  }
-  console.log(JSON.stringify(user,undefined,2));
+    if (!user) {
+        return console.log('User not found');
+    }
+    console.log(JSON.stringify(user, undefined, 2));
 
 }).catch((e) => console.log(e));
