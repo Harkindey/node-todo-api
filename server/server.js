@@ -79,7 +79,7 @@ app.delete('/todos/:id', (req, res) => {
     });
 });
 
-app.patch('/todo/:id', (req, res) => {
+app.patch('/todos/:id', (req, res) => {
     var id = req.params.id;
     var body = _.pick(req.body, ['text', 'completed']);
 
@@ -87,7 +87,7 @@ app.patch('/todo/:id', (req, res) => {
         return res.status(404).send();
     }
 
-    if (_.isBoolean(body.boolean) == "true") {
+    if (_.isBoolean(body.completed) && body.completed) {
         body.completedAt = new Date().getTime();
     } else {
         body.completed = false;
